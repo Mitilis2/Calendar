@@ -1,0 +1,57 @@
+/* /////////////////////////NOTES////////////////////////////////// */
+/* FOR WEDNESDAY 09/01:  */
+/* choose a font */
+/* choose a color/theme */
+/* Look up grid properties */
+/* style title-bar, add icons to change month */
+/* //////////////////////////////////////////////////////////////// */
+
+/* color var */
+:root{
+
+}
+
+/* initial sizing/styling */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+.calendar-container{
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+.title-bar{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border: 10px solid red;
+    align-items: baseline;
+}
+.calendar-day-names{
+    display: flex;
+    border: 10px solid green;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.days{
+    padding-right: 1%;
+    border-right: 5px solid grey;
+}
+
+.days:last-child{
+    border: none;
+}
+
+.calendar-layout{
+    display: grid;
+    border: 1px solid orangered;
+
+
+}
+.day{
+    border: 10px solid blue;
+}

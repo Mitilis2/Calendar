@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mitilis' Calendar</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 </head>
@@ -17,20 +18,29 @@
             <p class="title-day">Tuesday</p>
             <h1 class="title-month">August</h1>
             <p class="title-year">2024</p>
+        <div class="month-change">
+            <i class="fas fa-chevron-left"></i>
+            <i class="fas fa-chevron-right"></i>
+            </div> 
         </div>
+        
         <div class="calendar-day-names">
-            <div class="days">Monday</div>
-            <div class="days">Tuesday</div>
-            <div class="days">Wednesday</div>
-            <div class="days">Thursday</div>
-            <div class="days">Friday</div>
-            <div class="days">Saturday</div>
-            <div class="days">Sunday</div>
+            <div class="weekday">Monday</div>
+            <div class="weekday">Tuesday</div>
+            <div class="weekday">Wednesday</div>
+            <div class="weekday">Thursday</div>
+            <div class="weekday">Friday</div>
+            <div class="weekday">Saturday</div>
+            <div class="weekday">Sunday</div>
         </div>
         <div class="calendar-layout">
-            <div class="day day-1">
-                <p class="calendar-number">1</p>
+            <div class="calendar-number">
+                <p class="day day-1">1</p>
+                <p class="hidden events">Empty</p>
+                <p class="hidden tasks">Empty</p>
             </div>
+
+            <!-- change layout to match above - allows for border -->
             <div class="day day-2">
                 <p class="calendar-number">2</p>
             </div>
@@ -124,8 +134,15 @@
 
         </div>
     </div>
+         
 
+    <footer>
+        <p class="footer">Created by Mitilis</p>
+        <div class="link"><a href="https://github.com/mitilis2">Github</a></div>
+        <div class="link"><a href="https://twitter.com/techtitlis">Twitter</a></div>
+    </footer>
 
+    <script src="https://kit.fontawesome.com/bd274f38ed.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

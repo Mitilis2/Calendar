@@ -1,17 +1,11 @@
 /* /////////////////////////NOTES////////////////////////////////// */
-/* FOR FRIDAY 09/01:
+/* FOR FRIDAY 09/03:
 
-style footer
-    links
-    border?
-
+MONDAY - 09/07   
 
 figure out border issue (double)
     border just around the days, not the whole rectangle
 
-
-MONDAY - 09/07   
-WORK ON MODAL WINDOW
 
 */
 
@@ -40,6 +34,7 @@ WORK ON MODAL WINDOW
   margin-left: 1%;
   background-color: var(--background);
   /* border: 2px solid brown; */
+  border-radius: 2%;
 }
 
 .title-bar {
@@ -48,6 +43,7 @@ WORK ON MODAL WINDOW
   justify-content: space-evenly;
   border-bottom: 3px solid var(--border);
   padding-bottom: 1%;
+  border-radius: 2%;
   align-items: baseline;
 }
 .title-month {
@@ -71,8 +67,11 @@ WORK ON MODAL WINDOW
 .calendar-layout {
   display: grid;
   border: 1px solid var(--border);
+  border-radius: 4%;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(5, 115px);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
 }
 /* .day {
   border: 1px solid black;
@@ -84,6 +83,8 @@ WORK ON MODAL WINDOW
 
 /* USE THIS TO PUT THE BORDER AROUND THE NUMBERS */
 .day {
+  border-radius: 2%;
+
   border: 1px solid var(--border);
   width: 100%;
   display: inline;
@@ -119,4 +120,79 @@ footer {
   display: inline;
   font-size: 1.5rem;
   padding: 0 10%;
+}
+
+.link a {
+  text-decoration: none;
+  color: orange;
+}
+.day-1,
+.week-5,
+.day {
+  border-radius: 2%;
+}
+
+.modal {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 27rem;
+  justify-content: space-between;
+  height: 33rem;
+  background-color: var(--background);
+  border: 2px solid var(--border);
+  border-radius: 3%;
+  position: fixed;
+  left: 35%;
+}
+
+.modal.hidden {
+  display: none;
+}
+.modal-title {
+  font-size: 3.5rem;
+  border-bottom: 3px solid hsl(327, 29%, 34%);
+}
+.modal-event,
+.modal-task {
+  font-size: 2rem;
+  text-align: center;
+}
+.modal-event,
+.event-li {
+  color: gray;
+}
+.event-day {
+  text-align: center;
+}
+.modal-task,
+.task-li {
+  color: orange;
+}
+
+.task-li,
+.event-li {
+  margin-left: 15%;
+  list-style-type: none;
+  font-size: 1.5rem;
+  padding: 2%;
+}
+.add-event-btn,
+.add-task-btn {
+  height: 1.5rem;
+  border: none;
+  border-radius: 10px;
+}
+.add-event-btn {
+  color: white;
+  background-color: gray;
+}
+.add-task-btn {
+  color: white;
+  background-color: orange;
+}
+
+.add-event-btn:hover,
+.add-task-btn:hover {
+  opacity: 0.5;
 }
